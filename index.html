@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="leaflet.css"/>
+<link rel="stylesheet" href="style.css">
+<title>ADDCOOR</title>
+</head>
+<body class="bg-grey">
+<main>
+<h1 class="center">Location onclick to Coordinates | Address to Coordinates</h1>
+	<!-- get current button -->
+	<div class="getcurrent col-20 shadow">
+		<button onclick="getLocation()" class="w-100 btnb">Get current Location</button>
+					<!-- get current inputs -->
+		<div class="row">
+			<div class="col-6 m2">
+				<label for="curlat">Latitude</label>
+				<input type="text" class="w-90" name="curlat" id="curlat" placeholder="Current Lat-Coordinate" />
+			</div>
+			<div class="col-6 m2 ml-m10">
+				<label for="curlon">Longitude</label>
+				<input type="text" class="w-100" name="curlon" id="curlon" placeholder="Current Long-Coordinate" />
+			</div>
+		</div>
+	</div>
+
+	<!-- horizontal line -->
+	<hr>
+
+	<div class="col-5 m2 shadow" style="height:800px;margin-top:2px;">
+
+			<!-- map inputs -->
+		<div class="row shadow">
+			<label>Get onclick Coordinates</label>
+			<div class="col-6 m2 shadow">
+				<label for="lat">Latitude</label>
+				<input type="text" name="lat" id="lat" placeholder="lat coordinate" />
+			</div>
+			<div class="col-6 m2">
+				<label for="lng">Longitude</label>
+				<input type="text" name="lng" id="lng" placeholder="long coordinate" />
+			</div>
+		</div>
+		<!-- map -->
+		<div id="latlongmap" class="latlongmap" style="width:100%;height:400px;" class="shadow"></div>
+
+		<!-- coordinates -->
+		<div class="col-6">
+			<h10 class="titleh10">[Long,Lat]</h10>
+			<span id="latlngspan" class="coordinatetxt">0,0</span>
+		</div>
+		<div class="col-6">
+			<h10 class="titleh10">GPS Coordinates</h10>
+			<span id="dms-lat" class="coordinatetxt">0</span>
+			<span id="dms-lng" class="coordinatetxt">0</span>
+		</div>
+
+	</div>
+	<div class="col-6 m2">
+		<!-- address input -->
+	<iframe src="ad2co.html" width="110%" height="800px" class="shadow" ></iframe>
+	</div>
+	</div>
+	<footer id="footer" class="bg-gray border shadow col-11 center">
+	<p><a href="https://bit.ly/safwan-nj" target="_blank">ADDCOOR</a> © Safwan Al Najjar 2022</p>
+	</footer>
+
+</main>
+
+<script src="leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
